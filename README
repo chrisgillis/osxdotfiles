@@ -1,0 +1,10 @@
+# VIM Setup
+Install brew (http://brew.sh/)
+brew install python
+brew install vim --with-python --with-ruby --with-perl
+brew install macvim --env-std --override-system-vim
+install powerline fonts (https://github.com/Lokaltog/powerline-fonts)
+install vundle (https://github.com/gmarik/Vundle.vim)
+open vim and type :PluginInstall
+
+
