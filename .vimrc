@@ -9,6 +9,7 @@ call vundle#begin()
   Plugin 'jnwhiteh/vim-golang'
 call vundle#end()
 
+set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 
 " BEGIN GENERAL CONFIG
