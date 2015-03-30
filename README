@@ -6,5 +6,3 @@ brew install macvim --env-std --override-system-vim
 install powerline fonts (https://github.com/Lokaltog/powerline-fonts)
 install vundle (https://github.com/gmarik/Vundle.vim)
 open vim and type :PluginInstall
-
-

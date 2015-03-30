@@ -25,6 +25,15 @@ syntax on
 colorscheme molokai
 " END PLUGIN CONFIG
 
+" BEGIN MACVIM SETUP
+if has("gui_running")
+	set guioptions-=m
+	set guioptions-=t
+	set guioptions-=r
+	set guioptions-=L
+endif
+" END MACVIM SETUP
+
 " BEGIN POWERLINE CONFIG
 set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
