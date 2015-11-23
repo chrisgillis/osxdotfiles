@@ -7,7 +7,9 @@ call vundle#begin()
   Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
   Plugin 'tomasr/molokai'
   Plugin 'fatih/vim-go'
+  Plugin 'tpope/vim-surround'
   Plugin 'kien/ctrlp.vim'
+  Plugin 'majutsushi/tagbar'
 call vundle#end()
 
 set rtp+=$GOROOT/misc/vim
@@ -40,11 +42,28 @@ syntax on
 let mapleader = "\<Space>" " leader is space
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>t :TagbarToggle<CR>
 inoremap jj <ESC>
+
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wk <C-W>k
+nnoremap <Leader>wj <C-W>j
+nnoremap <Leader>wh <C-W>h
+nnoremap <Leader>wl <C-W>l
+nnoremap <Leader>wc <C-W>c
+
+nnoremap <Leader>d <C-d>
+nnoremap <Leader>u <C-u>
+
+nnoremap <Leader>bb :buffers<CR>:buffer 
+nnoremap <Leader>bl :buffers<CR>
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bp :bprevious<CR>
+nnoremap <Leader>bd :bd<CR>
 " END PRODUCTIVITY CONFIG
 
 " BEGIN PLUGIN CONFIG
-colorscheme molokai
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 " END PLUGIN CONFIG
 
 " BEGIN MACVIM SETUP
@@ -65,6 +84,8 @@ set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
 set laststatus=2
+
+colorscheme molokai
 
 if has("gui_running")
 	let s:uname = system("uname")
