@@ -1,6 +1,7 @@
 # VIM Setup
 Install brew (http://brew.sh/)
 brew install python
+brew install ctags
 brew install vim --with-python --with-ruby --with-perl
 brew install macvim --env-std --override-system-vim
 install powerline fonts (https://github.com/Lokaltog/powerline-fonts)
