@@ -4,12 +4,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
+  Plugin 'Shougo/vimproc' "Dont forget to 'make' in ~/.vim/vimproc
+  Plugin 'Shougo/unite.vim'
   Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
   Plugin 'tomasr/molokai'
   Plugin 'fatih/vim-go'
   Plugin 'tpope/vim-surround'
   Plugin 'kien/ctrlp.vim'
   Plugin 'majutsushi/tagbar'
+  "Plugin 'm2mdas/phpcomplete-extended'
 call vundle#end()
 
 set rtp+=$GOROOT/misc/vim
@@ -38,11 +41,16 @@ set title
 syntax on
 " END GENERAL CONFIG
 
+" AUTOCOMPLETE CONFIG
+"autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+"let g:phpcomplete_index_composer_command="composer"
+" END AUTOCOMPLETE CONFIG
+"
 " BEGIN PRODUCTIVITY CONFIG
 let mapleader = "\<Space>" " leader is space
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>t :TagbarToggle<CR><C-W>l
 inoremap jj <ESC>
 
 nnoremap <Leader>ww <C-W>w
@@ -60,6 +68,7 @@ nnoremap <Leader>bl :buffers<CR>
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Leader>bd :bd<CR>
+nnoremap <Leader>gr :GoRun<CR>
 " END PRODUCTIVITY CONFIG
 
 " BEGIN PLUGIN CONFIG
