@@ -18,6 +18,8 @@ call vundle#end()
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 
+let $GOPATH = '/Users/chris/go'
+
 " BEGIN GENERAL CONFIG
 set nowrap " dont wrap ze lines
 set backspace=indent,eol,start " allow backspacing 
@@ -68,7 +70,10 @@ nnoremap <Leader>bl :buffers<CR>
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Leader>bd :bd<CR>
-nnoremap <Leader>gr :GoRun<CR>
+nnoremap <Leader>gr :w<CR>:GoRun<CR>
+nnoremap <Leader>gt :w<CR>:GoTest<CR>
+
+nmap <silent> <BS> :nohlsearch<CR>
 " END PRODUCTIVITY CONFIG
 
 " BEGIN PLUGIN CONFIG
