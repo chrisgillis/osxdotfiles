@@ -23,10 +23,12 @@ let $GOPATH = '/Users/chris/go'
 " BEGIN GENERAL CONFIG
 set nowrap " dont wrap ze lines
 set backspace=indent,eol,start " allow backspacing 
+set hidden " allow buffer switch without save
 set autoindent
 set nocp
 set number
 set noerrorbells
+set novisualbell
 set showmatch
 set hls
 set hlsearch
@@ -50,11 +52,14 @@ syntax on
 "
 " BEGIN PRODUCTIVITY CONFIG
 let mapleader = "\<Space>" " leader is space
+
+" Plugins
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>t :TagbarToggle<CR><C-W>l
 inoremap jj <ESC>
 
+" Windows
 nnoremap <Leader>ww <C-W>w
 nnoremap <Leader>wk <C-W>k
 nnoremap <Leader>wj <C-W>j
@@ -62,14 +67,21 @@ nnoremap <Leader>wh <C-W>h
 nnoremap <Leader>wl <C-W>l
 nnoremap <Leader>wc <C-W>c
 
+" Movement
 nnoremap <Leader>d <C-d>
 nnoremap <Leader>u <C-u>
 
+" Annoyances
+nnoremap <Leader>l :noh<CR>
+
+" Buffers
 nnoremap <Leader>bb :buffers<CR>:buffer 
 nnoremap <Leader>bl :buffers<CR>
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprevious<CR>
 nnoremap <Leader>bd :bd<CR>
+
+" Go 
 nnoremap <Leader>gr :w<CR>:GoRun<CR>
 nnoremap <Leader>gt :w<CR>:GoTest<CR>
 
